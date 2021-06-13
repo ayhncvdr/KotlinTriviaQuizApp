@@ -81,7 +81,7 @@ class Questions : AppCompatActivity() {
     }
 
     private fun startQuiz() {
-        val nextbtn = findViewById<ImageButton>(R.id.next_btn);
+
         val totalnum: TextView = findViewById<TextView>(R.id.total_num);
         val questionnum: TextView=findViewById<TextView>(R.id.textView6);
         val mainquestion: TextView = findViewById<TextView>(R.id.main_question);
@@ -107,7 +107,7 @@ class Questions : AppCompatActivity() {
         // Set the first Question
 
 
-
+        mainquestion.text=currentQuestion
 
         if (Build.VERSION.SDK_INT>=24){
             mainquestion.setText(Html.fromHtml(currentQuestion, Html.FROM_HTML_MODE_LEGACY).toString())

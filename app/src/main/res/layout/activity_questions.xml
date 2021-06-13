@@ -35,10 +35,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/opensansbold"
-                android:text="1/20"
-                android:textColor="#006996"
+                android:text="1/10"
+                android:textColor="#FF9122"
                 android:textSize="16dp"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -62,16 +63,17 @@
                     android:layout_height="match_parent"
                     android:layout_weight="3.8"
                 >
+
                     <TextView
                         android:id="@+id/textView6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/opensansbold"
                         android:text="1."
-                        android:textColor="#006995"
+                        android:textColor="#FF9122"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                 </RelativeLayout>
 
@@ -80,14 +82,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                 >
+
                     <TextView
                         android:id="@+id/main_question"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="The length of the bridge, which a train
-130 metres long and travelling at45
-km/hrcan cross in 30 seconds, is:"
-                        android:textColor="#2D333C" android:textSize="17sp" app:lineHeight="27dp"/>
+                        android:text="The capital of Turkey is :"
+                        android:textColor="#2D333C"
+                        android:textSize="17sp"
+                        app:lineHeight="27dp" />
                 </RelativeLayout>
 
             </LinearLayout>
