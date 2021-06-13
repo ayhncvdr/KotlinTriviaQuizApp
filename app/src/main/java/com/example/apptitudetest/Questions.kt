@@ -1,15 +1,20 @@
 package com.example.apptitudetest
 
+import android.os.Build
 import android.os.Bundle
+import android.text.Html
 import android.view.View
 import android.widget.ImageButton
 import android.widget.ListView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.text.htmlEncode
 import com.github.kittinunf.fuel.httpGet
+import com.github.kittinunf.fuel.util.decodeBase64ToString
 import com.github.kittinunf.result.Result
 import com.google.gson.GsonBuilder
+import org.w3c.dom.Text
 import kotlin.math.abs
 
 
@@ -78,6 +83,7 @@ class Questions : AppCompatActivity() {
     private fun startQuiz() {
         val nextbtn = findViewById<ImageButton>(R.id.next_btn);
         val totalnum: TextView = findViewById<TextView>(R.id.total_num);
+        val questionnum: TextView=findViewById<TextView>(R.id.textView6);
         val mainquestion: TextView = findViewById<TextView>(R.id.main_question);
         val donelayout: ConstraintLayout = findViewById(R.id.done);
         val quizlayout: ConstraintLayout = findViewById(R.id.quiz);
@@ -95,10 +101,21 @@ class Questions : AppCompatActivity() {
         // Increase the Display number to +1
         questionNum++;
         totalnum.text = "${questionNum.toString()}/${allJoined[0].questions.count()}";
+        questionnum.text="${questionNum.toString()}"+". ";
 
 
         // Set the first Question
-        mainquestion.text = currentQuestion;
+
+
+
+
+        if (Build.VERSION.SDK_INT>=24){
+            mainquestion.setText(Html.fromHtml(currentQuestion, Html.FROM_HTML_MODE_LEGACY).toString())
+        }
+        else{
+            mainquestion.setText(Html.fromHtml(currentQuestion).toString())
+        }
+
 
         // Set the first Question Answers
         var qanswers: ArrayList<String> = allJoined[0].answers[questionNr];
@@ -135,6 +152,7 @@ class Questions : AppCompatActivity() {
             }
 
             totalnum.text = "${questionNum.toString()}/${allJoined[0].questions.count()}"
+            questionnum.text="${questionNum.toString()}"+". "
             mainquestion.text = allJoined[0].questions[questionNr];
 
             //update answers

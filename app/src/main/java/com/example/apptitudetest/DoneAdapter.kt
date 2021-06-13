@@ -27,6 +27,10 @@ class DoneAdapter(private val context: Context,
         val statRow: View = layoutInflater.inflate(R.layout.donelist, viewGroup, false)
 
         statRow.findViewById<TextView>(R.id.q_number).text = "Attempted Questions: ${info.qNumbers}"
+        statRow.findViewById<TextView>(R.id.textView9).text = "Correct Answers: ${info.qCorrectAnswers}"
+        statRow.findViewById<TextView>(R.id.textView10).text="Incorrect Marks: ${info.qNegative}"
+        statRow.findViewById<TextView>(R.id.score).text = "Score: ${info.qCorrectAnswers}/${info.qNumbers} "
+
 
         return statRow
     }

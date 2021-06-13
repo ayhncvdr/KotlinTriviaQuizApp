@@ -15,54 +15,27 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/opensansbold"
         android:gravity="center"
-        android:text="WELCOME TO"
-        android:textColor="#006793"
+        android:text="Trivia Quiz App"
+        android:textColor="#FF9122"
         android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-    />
-
-    <TextView
-        android:id="@+id/apptifier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/opensansbold"
-        android:gravity="center"
-        android:text="APPTIFIER"
-        android:textColor="#1CC4B8"
-        android:textSize="40dp"
-        app:layout_constraintEnd_toEndOf="@id/welcome"
-        app:layout_constraintStart_toStartOf="@id/welcome"
-        app:layout_constraintTop_toBottomOf="@id/welcome"
-    />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:src="@drawable/group_340"
-        app:layout_constraintEnd_toEndOf="@id/welcome"
-        app:layout_constraintStart_toStartOf="@id/welcome"
-        app:layout_constraintTop_toBottomOf="@id/apptifier"
-    />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="27.8dp"
+        android:layout_width="375dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="200dp"
         android:fontFamily="@font/opensansitalic"
         android:gravity="center"
-        android:text="An place where you can test your
-
- verbal, quantitative, and analytical skills."
+        android:text="In this app, you can test your knowledge in variuos fields."
         android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView"
-    />
+        app:layout_constraintTop_toBottomOf="@+id/welcome" />
 
     <Button
         android:id="@+id/button"
@@ -71,13 +44,24 @@
         android:layout_marginTop="49dp"
         android:width="227dp"
         android:height="60dp"
+        android:background="#FF9122"
         android:backgroundTint="#006793"
         android:fontFamily="@font/opensansextrabold"
         android:text="Start"
+        app:backgroundTint="#FF5722"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView2"
-    />
+        app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="290dp"
+        android:layout_height="273dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome"
+        app:srcCompat="@drawable/trivia" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
